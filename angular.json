@@ -2,5 +2,46 @@
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
   "version": 1,
   "newProjectRoot": "projects",
-  "projects": {}
+  "projects": {
+    "ngx-form-trooper": {
+      "projectType": "library",
+      "root": "projects/ngx-form-trooper",
+      "sourceRoot": "projects/ngx-form-trooper/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "tsConfig": "projects/ngx-form-trooper/tsconfig.lib.json",
+            "project": "projects/ngx-form-trooper/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/ngx-form-trooper/tsconfig.lib.prod.json"
+            }
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/ngx-form-trooper/src/test.ts",
+            "tsConfig": "projects/ngx-form-trooper/tsconfig.spec.json",
+            "karmaConfig": "projects/ngx-form-trooper/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/ngx-form-trooper/tsconfig.lib.json",
+              "projects/ngx-form-trooper/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    }},
+  "defaultProject": "ngx-form-trooper"
 }
