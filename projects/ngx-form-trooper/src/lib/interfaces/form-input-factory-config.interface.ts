@@ -1,3 +1,5 @@
+import { ValidatorFn } from '@angular/forms';
+
 import { IFormInputValidationConfig } from './form-input-validation-config.interface';
 
 export interface IFormInputFactoryConfig {
@@ -6,5 +8,5 @@ export interface IFormInputFactoryConfig {
   type?: string;
   placeholder?: string;
   defaultValue?: any;
-  validators?: IFormInputValidationConfig;
+  validators?: IFormInputValidationConfig | ValidatorFn[];
 }

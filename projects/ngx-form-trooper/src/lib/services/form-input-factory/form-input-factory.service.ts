@@ -22,8 +22,12 @@ export class FormInputFactory {
   }
 
   private _buildValidation(
-    config?: IFormInputValidationConfig
+    config?: IFormInputValidationConfig | Array<ValidatorFn>
   ): Array<ValidatorFn> {
+    if (Array.isArray(config)) {
+      return config;
+    }
+
     const validators = [];
 
     if (!config) {

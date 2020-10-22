@@ -14,3 +14,4 @@ Default styles of the form can be overriden with CSS variables.
 | `--color-form-input-border--error` | `#fc8181` (light red)             | Input border color when errored         |
 | `--color-form-input-label`         | `#2b6cb0` (darker blue)           | Label color for each input              |
 | `--color-form-input-label--error`  | `#c53030` (darker red)            | Label color for each input when errored |
+| `--form-input-border-radius`       | `5px`                             | Border radius for each form input       |

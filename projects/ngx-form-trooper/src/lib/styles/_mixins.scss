@@ -6,7 +6,7 @@
   );
   padding: 12px;
   border: 1px solid var(--color-form-input-border, $color-form-input-border);
-  border-radius: $br-sm;
+  border-radius: var(--form-input-border-radius, $br-sm);
   font-size: 18px;
   width: 100%;
   margin-bottom: 23px;
