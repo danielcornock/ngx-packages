@@ -4,16 +4,13 @@ import { FormControl } from '@angular/forms';
 import { FormInputField } from '../../instances';
 
 @Component({
-  selector: 'app-form-input',
+  selector: 'ngx-form-input',
   templateUrl: './form-input.component.html',
   styleUrls: ['./form-input.component.scss']
 })
-export class FormInputComponent implements OnInit {
+export class NgxFormInputComponent implements OnInit {
   @Input()
   public formInputField: FormInputField;
-
-  @Input()
-  public type = 'text';
 
   public control: FormControl;
   public isRequired: boolean;

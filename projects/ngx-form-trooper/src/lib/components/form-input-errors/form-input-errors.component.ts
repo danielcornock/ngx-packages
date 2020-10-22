@@ -2,11 +2,11 @@ import { Component, Input, OnChanges } from '@angular/core';
 import { ValidationErrors } from '@angular/forms';
 
 @Component({
-  selector: 'app-form-input-errors',
+  selector: 'ngx-form-input-errors',
   templateUrl: './form-input-errors.component.html',
   styleUrls: ['./form-input-errors.component.scss']
 })
-export class FormInputErrorsComponent implements OnChanges {
+export class NgxFormInputErrorsComponent implements OnChanges {
   @Input()
   public errors: ValidationErrors;
 

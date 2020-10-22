@@ -1,24 +1,16 @@
 # NgxFormTrooper
 
-This library was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.1.6.
+A library built around Angular's reactive forms to reduce boilerplate and ease testing.
 
-## Code scaffolding
+This package provides services, instances and components.
 
-Run `ng generate component component-name --project ngx-form-trooper` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module --project ngx-form-trooper`.
-> Note: Don't forget to add `--project ngx-form-trooper` or else it will be added to the default project in your `angular.json` file. 
+## Changing the default styles
 
-## Build
+Default styles of the form can be overriden with CSS variables.
 
-Run `ng build ngx-form-trooper` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Publishing
-
-After building your library with `ng build ngx-form-trooper`, go to the dist folder `cd dist/ngx-form-trooper` and run `npm publish`.
-
-## Running unit tests
-
-Run `ng test ngx-form-trooper` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+| CSS Variable                       | Default Value                     | Function                                |
+| ---------------------------------- | --------------------------------- | --------------------------------------- |
+| `--color-form-input-border`        | `rgba(#1c80dc, 65%)` (light blue) | Input border color                      |
+| `--color-form-input-border--error` | `#fc8181` (light red)             | Input border color when errored         |
+| `--color-form-input-label`         | `#2b6cb0` (darker blue)           | Label color for each input              |
+| `--color-form-input-label--error`  | `#c53030` (darker red)            | Label color for each input when errored |

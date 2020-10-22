@@ -2,7 +2,6 @@
 
 .FormInput {
   &-input {
-    padding: $spacing-20;
     @include form-input;
   }
 
