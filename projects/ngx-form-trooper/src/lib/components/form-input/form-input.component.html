@@ -4,7 +4,7 @@
     [for]="formInputField.name"
     [class.is-errored]="isErrored"
     >{{ formInputField.label }}
-    <span class="FormInput-isRequired" *ngIf="isRequired"> *</span>
+    <span *ngIf="isRequired"> *</span>
   </label>
   <input
     class="FormInput-input"
