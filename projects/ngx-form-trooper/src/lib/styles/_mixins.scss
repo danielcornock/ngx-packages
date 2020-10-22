@@ -1,0 +1,56 @@
+@mixin form-input {
+  display: block;
+  background-color: var(
+    --color-form-input-background,
+    $color-form-input-background
+  );
+  padding: 12px;
+  border: 1px solid var(--color-form-input-border, $color-form-input-border);
+  border-radius: $br-sm;
+  font-size: 18px;
+  width: 100%;
+  margin-bottom: 23px;
+
+  @include form-input-error-styles;
+}
+
+@mixin form-input-label {
+  display: block;
+  text-align: left;
+  font-size: 14px;
+  margin-bottom: $spacing-5;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  color: var(--color-form-label, $color-form-label);
+
+  @include form-label-error-styles;
+}
+
+@mixin form-error-text {
+  color: var(--color-form-input-error-text, $color-form-input-error-text);
+  font-weight: 500;
+  font-size: 14px;
+}
+
+@mixin form-input-error-styles {
+  &.is-errored {
+    border-color: var(
+      --color-form-input-error-border,
+      $color-form-input-error-border
+    );
+    margin-bottom: 0;
+
+    &:focus {
+      outline-color: var(
+        --color-form-input-error-border,
+        $color-form-input-error-border
+      );
+    }
+  }
+}
+
+@mixin form-label-error-styles {
+  &.is-errored {
+    color: var(--color-form-input-error-text, $color-form-input-error-text);
+  }
+}

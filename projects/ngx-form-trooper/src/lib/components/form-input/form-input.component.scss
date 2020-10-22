@@ -1,0 +1,12 @@
+@import '../../styles/styles.scss';
+
+.FormInput {
+  &-input {
+    padding: $spacing-20;
+    @include form-input;
+  }
+
+  &-label {
+    @include form-input-label;
+  }
+}
