@@ -7,7 +7,8 @@
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
-    "build:forms": "ng build ngx-form-trooper --watch"
+    "serve:forms": "ng build ngx-form-trooper --watch",
+    "build:forms": "ng build ngx-form-trooper --prod"
   },
   "private": true,
   "dependencies": {
