@@ -4,6 +4,7 @@ import { forEach } from 'lodash';
 
 import { FormContainer } from '../../instances/form-container/form-container';
 import { FormInputField } from '../../instances/form-input-field/form-input-field';
+import { FormInputGroup } from '../../instances/form-input-group/form-input-group';
 import { IFormFactoryConfig } from '../../interfaces/form-factory-config.interface';
 import { IFormInputFactoryConfig } from '../../interfaces/form-input-factory-config.interface';
 import { FormInputFactory } from '../form-input-factory/form-input-factory.service';
@@ -30,7 +31,9 @@ export class FormFactory {
     return new FormContainer(inputs, formGroup);
   }
 
-  private _createInputs(config: IFormFactoryConfig): Array<FormInputField> {
+  private _createInputs(
+    config: IFormFactoryConfig
+  ): Array<FormInputField | FormInputGroup> {
     return config.map((fieldConfig: IFormInputFactoryConfig) => {
       return this._formInputFactory.create(fieldConfig);
     });

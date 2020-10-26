@@ -1,5 +1,9 @@
 @import '../../styles/styles.scss';
 
+:host {
+  display: block;
+}
+
 .FormInputMultiSelect {
   &-select {
     @include form-input;

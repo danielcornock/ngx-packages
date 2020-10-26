@@ -1,5 +1,8 @@
 @import '../../styles/styles.scss';
 
+:host {
+  display: block;
+}
 .FormInput {
   &-input {
     @include form-input;
