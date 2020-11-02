@@ -6,6 +6,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { FormInputMultiSelectComponent } from './components';
 import { NgxFormInputErrorsComponent } from './components/form-input-errors/form-input-errors.component';
+import { FormInputPasswordComponent } from './components/form-input-password/form-input-password.component';
 import { NgxFormInputComponent } from './components/form-input/form-input.component';
 import { FormFactory } from './services/form-factory/form-factory.service';
 import { FormInputFactory } from './services/form-input-factory/form-input-factory.service';
@@ -14,7 +15,8 @@ import { FormInputFactory } from './services/form-input-factory/form-input-facto
   declarations: [
     NgxFormInputComponent,
     NgxFormInputErrorsComponent,
-    FormInputMultiSelectComponent
+    FormInputMultiSelectComponent,
+    FormInputPasswordComponent
   ],
   imports: [
     CommonModule,
@@ -27,6 +29,7 @@ import { FormInputFactory } from './services/form-input-factory/form-input-facto
   exports: [
     NgxFormInputComponent,
     NgxFormInputErrorsComponent,
+    FormInputPasswordComponent,
     FormInputMultiSelectComponent
   ]
 })

@@ -7,7 +7,7 @@
       "projectType": "library",
       "root": "projects/ngx-form-trooper",
       "sourceRoot": "projects/ngx-form-trooper/src",
-      "prefix": "lib",
+      "prefix": "ngx",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:ng-packagr",
@@ -36,12 +36,11 @@
               "projects/ngx-form-trooper/tsconfig.lib.json",
               "projects/ngx-form-trooper/tsconfig.spec.json"
             ],
-            "exclude": [
-              "**/node_modules/**"
-            ]
+            "exclude": ["**/node_modules/**"]
           }
         }
       }
-    }},
+    }
+  },
   "defaultProject": "ngx-form-trooper"
 }
