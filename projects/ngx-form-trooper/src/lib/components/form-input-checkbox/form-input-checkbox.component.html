@@ -1,0 +1,14 @@
+<label class="FormInputCheckbox-container" [for]="formInputField.name">
+  <input
+    [id]="formInputField.name"
+    type="checkbox"
+    class="FormInputCheckbox-input"
+    [formControl]="formInputField.control"
+    [class.is-errored]="isErrored"
+    [checked]="formInputField.control.value"
+  />
+  <div class="FormInputCheckbox-checkbox">
+    <i-feather name="check" *ngIf="formInputField.control.value"></i-feather>
+  </div>
+  <span class="FormInputCheckbox-label">{{ formInputField.label }}</span>
+</label>

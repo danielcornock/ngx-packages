@@ -1,0 +1,44 @@
+@import '../../styles/styles.scss';
+
+:host {
+  display: block;
+}
+
+.FormInputCheckbox {
+  &-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 23px;
+  }
+
+  &-input {
+    visibility: hidden;
+    width: 0;
+  }
+
+  &-checkbox {
+    border: 1px solid var(--color-form-input-border, $color-form-input-border);
+    border-radius: var(--form-input-border-radius, $br-sm);
+    background-color: var(
+      --color-form-input-background,
+      $color-form-input-background
+    );
+    height: 26px;
+    width: 26px;
+    margin-right: $spacing-10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    i-feather {
+      height: 20px;
+      width: 20px;
+      color: var(--color-form-checkbox-check, $color-form-label);
+    }
+  }
+
+  &-label {
+    @include form-input-label;
+    margin-bottom: 0;
+  }
+}
