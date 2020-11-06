@@ -2,6 +2,7 @@ import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatSelectModule } from '@angular/material/select';
+import { MatTooltipModule } from '@angular/material/tooltip';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FeatherModule } from 'angular-feather';
 import { Check } from 'angular-feather/icons';
@@ -28,6 +29,7 @@ import { FormInputFactory } from './services/form-input-factory/form-input-facto
     ReactiveFormsModule,
     MatSelectModule,
     BrowserAnimationsModule,
+    MatTooltipModule,
     FeatherModule.pick({ Check })
   ],
   providers: [FormInputFactory, FormFactory],

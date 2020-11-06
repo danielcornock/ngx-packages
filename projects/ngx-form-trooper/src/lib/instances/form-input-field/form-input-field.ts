@@ -8,6 +8,7 @@ export class FormInputField {
   public control: FormControl;
   public placeholder?: string;
   public type: string;
+  public tooltip: string;
 
   constructor(config: IFormInputFieldConfig) {
     this.name = config.name;
@@ -15,5 +16,6 @@ export class FormInputField {
     this.control = config.control;
     this.placeholder = config.placeholder;
     this.type = config.type || 'text';
+    this.tooltip = config.tooltip;
   }
 }

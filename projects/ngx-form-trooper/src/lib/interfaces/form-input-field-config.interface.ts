@@ -6,4 +6,5 @@ export interface IFormInputFieldConfig {
   type?: string;
   control: FormControl;
   placeholder?: string;
+  tooltip?: string;
 }

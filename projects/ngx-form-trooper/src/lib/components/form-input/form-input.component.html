@@ -8,8 +8,14 @@
   </label>
   <input
     class="FormInput-input"
+    #tooltip="matTooltip"
+    [matTooltip]="formInputField.tooltip"
+    matTooltipPosition="above"
+    (focus)="tooltip.show()"
+    (blur)="tooltip.hide()"
     [class.is-errored]="isErrored"
     [type]="formInputField.type"
+    [placeholder]="formInputField.placeholder || ''"
     [id]="formInputField.label"
     [formControl]="control"
   />
