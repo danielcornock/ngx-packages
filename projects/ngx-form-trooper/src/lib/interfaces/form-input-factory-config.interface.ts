@@ -12,6 +12,7 @@ export interface IFormInputFactoryFieldConfig {
   type?: string;
   placeholder?: string;
   defaultValue?: any;
+  disabled?: boolean;
   validators?: IFormInputValidationConfig | ValidatorFn[];
   tooltip?: string;
 }

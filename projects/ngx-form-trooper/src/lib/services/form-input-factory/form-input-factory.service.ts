@@ -3,7 +3,10 @@ import { FormBuilder, ValidatorFn, Validators } from '@angular/forms';
 
 import { FormInputField } from '../../instances/form-input-field/form-input-field';
 import { FormInputGroup } from '../../instances/form-input-group/form-input-group';
-import { IFormInputFactoryConfig, IFormInputFactoryGroupConfig } from '../../interfaces/form-input-factory-config.interface';
+import {
+  IFormInputFactoryConfig,
+  IFormInputFactoryGroupConfig
+} from '../../interfaces/form-input-factory-config.interface';
 import { IFormInputValidationConfig } from '../../interfaces/form-input-validation-config.interface';
 
 @Injectable({
@@ -21,7 +24,7 @@ export class FormInputFactory {
       return new FormInputField({
         ...config,
         control: this._formBuilder.control(
-          config.defaultValue,
+          { value: config.defaultValue, disabled: config.disabled },
           this._buildValidation(config.validators)
         )
       });
@@ -67,6 +70,22 @@ export class FormInputFactory {
 
     if (config.email) {
       validators.push(Validators.email);
+    }
+
+    if (config.min) {
+      validators.push(Validators.min(config.min));
+    }
+
+    if (config.max) {
+      validators.push(Validators.max(config.max));
+    }
+
+    if (config.minLength) {
+      validators.push(Validators.minLength(config.minLength));
+    }
+
+    if (config.maxLength) {
+      validators.push(Validators.maxLength(config.maxLength));
     }
 
     return validators;

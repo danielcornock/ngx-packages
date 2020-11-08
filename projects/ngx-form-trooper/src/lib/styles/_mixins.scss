@@ -12,6 +12,10 @@
   margin-bottom: 23px;
 
   @include form-input-error-styles;
+
+  &:disabled {
+    opacity: 0.5;
+  }
 }
 
 @mixin form-input-label {
