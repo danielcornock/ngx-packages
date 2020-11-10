@@ -5,5 +5,10 @@
     "entryFile": "src/public-api.ts",
     "styleIncludePaths": ["./lib/styles"]
   },
-  "whitelistedNonPeerDependencies": ["lodash", "angular-feather"]
+  "whitelistedNonPeerDependencies": [
+    "lodash",
+    "angular-feather",
+    "ngx-quill",
+    "quill"
+  ]
 }

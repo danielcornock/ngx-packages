@@ -1,0 +1,53 @@
+@import '../../styles/styles.scss';
+
+:host {
+  display: block;
+}
+.FormInputHtml {
+  &-label {
+    @include form-input-label;
+  }
+
+  &-editor {
+    margin-bottom: 23px;
+    display: block;
+
+    &.is-errored {
+      margin-bottom: 0;
+    }
+  }
+}
+
+::ng-deep {
+  .ql-toolbar.ql-snow {
+    border: 1px solid var(--color-form-input-border, $color-form-input-border);
+    border-radius: $br-med $br-med 0 0;
+    background-color: #f9f9f9;
+  }
+
+  .ql-container.ql-snow {
+    background-color: var(
+      --color-form-input-background,
+      $color-form-input-background
+    );
+    border: 1px solid var(--color-form-input-border, $color-form-input-border);
+    border-top: 0;
+    border-radius: 0 0 $br-med $br-med;
+    font-size: 16px;
+    min-height: 74px;
+  }
+
+  .FormInputHtml {
+    &-editor {
+      &.is-errored {
+        .ql-toolbar.ql-snow,
+        .ql-container.ql-snow {
+          border-color: var(
+            --color-form-input-border--error,
+            $color-form-input-border--error
+          ) !important;
+        }
+      }
+    }
+  }
+}

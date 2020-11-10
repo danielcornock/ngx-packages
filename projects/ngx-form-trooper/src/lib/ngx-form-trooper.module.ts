@@ -4,12 +4,12 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatSelectModule } from '@angular/material/select';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { FeatherModule } from 'angular-feather';
-import { Check } from 'angular-feather/icons';
+import { QuillModule } from 'ngx-quill';
 
 import { FormInputMultiSelectComponent } from './components';
 import { FormInputCheckboxComponent } from './components/form-input-checkbox/form-input-checkbox.component';
 import { NgxFormInputErrorsComponent } from './components/form-input-errors/form-input-errors.component';
+import { FormInputHtmlComponent } from './components/form-input-html/form-input-html.component';
 import { FormInputPasswordComponent } from './components/form-input-password/form-input-password.component';
 import { NgxFormInputComponent } from './components/form-input/form-input.component';
 import { FormFactory } from './services/form-factory/form-factory.service';
@@ -21,7 +21,8 @@ import { FormInputFactory } from './services/form-input-factory/form-input-facto
     NgxFormInputErrorsComponent,
     FormInputMultiSelectComponent,
     FormInputPasswordComponent,
-    FormInputCheckboxComponent
+    FormInputCheckboxComponent,
+    FormInputHtmlComponent
   ],
   imports: [
     CommonModule,
@@ -30,7 +31,7 @@ import { FormInputFactory } from './services/form-input-factory/form-input-facto
     MatSelectModule,
     BrowserAnimationsModule,
     MatTooltipModule,
-    FeatherModule.pick({ Check })
+    QuillModule.forRoot()
   ],
   providers: [FormInputFactory, FormFactory],
   exports: [
@@ -38,7 +39,8 @@ import { FormInputFactory } from './services/form-input-factory/form-input-facto
     NgxFormInputErrorsComponent,
     FormInputPasswordComponent,
     FormInputMultiSelectComponent,
-    FormInputCheckboxComponent
+    FormInputCheckboxComponent,
+    FormInputHtmlComponent
   ]
 })
 export class NgxFormTrooperModule {}

@@ -1,5 +1,6 @@
 import { ValidatorFn } from '@angular/forms';
 
+import { FormInputType } from '../constants/form-input-type.constant';
 import { IFormInputValidationConfig } from './form-input-validation-config.interface';
 
 export type IFormInputFactoryConfig =
@@ -9,7 +10,7 @@ export type IFormInputFactoryConfig =
 export interface IFormInputFactoryFieldConfig {
   name: string;
   label: string;
-  type?: string;
+  type?: FormInputType;
   placeholder?: string;
   defaultValue?: any;
   disabled?: boolean;

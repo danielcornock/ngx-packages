@@ -1,0 +1,19 @@
+<div class="FormInputHtml-container">
+  <label
+    class="FormInputHtml-label"
+    [for]="formInputField.name"
+    [class.is-errored]="isErrored"
+    >{{ formInputField.label }}
+    <span *ngIf="isRequired"> *</span>
+  </label>
+  <quill-editor
+    class="FormInputHtml-editor"
+    [formControl]="formInputField.control"
+    [attr.id]="formInputField.name"
+    [class.is-errored]="isErrored"
+  ></quill-editor>
+  <ngx-form-input-errors
+    *ngIf="isErrored"
+    [errors]="control.errors"
+  ></ngx-form-input-errors>
+</div>
