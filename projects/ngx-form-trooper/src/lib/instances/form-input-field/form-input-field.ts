@@ -2,6 +2,7 @@ import { FormControl } from '@angular/forms';
 
 import { FormInputType } from '../../constants/form-input-type.constant';
 import { IFormInputFieldConfig } from '../../interfaces/form-input-field-config.interface';
+import { ILabelValuePair } from '../../interfaces/key-value.interface';
 
 export class FormInputField {
   public name: string;
@@ -10,6 +11,7 @@ export class FormInputField {
   public placeholder?: string;
   public type: FormInputType;
   public tooltip?: string;
+  public options?: Array<ILabelValuePair>;
 
   constructor(config: IFormInputFieldConfig) {
     this.name = config.name;
@@ -18,5 +20,6 @@ export class FormInputField {
     this.placeholder = config.placeholder;
     this.type = config.type || FormInputType.TEXT;
     this.tooltip = config.tooltip;
+    this.options = config.options;
   }
 }

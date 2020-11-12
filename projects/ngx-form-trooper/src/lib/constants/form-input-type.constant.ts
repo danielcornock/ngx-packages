@@ -6,5 +6,7 @@ export enum FormInputType {
   CHECKBOX = 'checkbox',
   PASSWORD = 'password',
   DATE = 'date',
-  MONTH = 'month'
+  MONTH = 'month',
+  SELECT = 'select',
+  RADIO = 'radio'
 }

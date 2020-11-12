@@ -1,7 +1,7 @@
 <div class="FormInput-container">
   <label
     class="FormInput-label"
-    [for]="formInputField.name"
+    [attr.for]="formInputField.name"
     [class.is-errored]="isErrored"
     >{{ formInputField.label }}
     <span *ngIf="isRequired"> *</span>
@@ -16,6 +16,7 @@
     [class.is-errored]="isErrored"
     [type]="formInputField.type"
     [placeholder]="formInputField.placeholder || ''"
+    [attr.name]="formInputField.name"
     [attr.id]="formInputField.label"
     [formControl]="control"
   />

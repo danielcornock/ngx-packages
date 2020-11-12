@@ -1,0 +1,25 @@
+<div class="FormInputSelect-container">
+  <label
+    class="FormInputSelect-label"
+    [attr.for]="formInputField.name"
+    [class.is-errored]="isErrored"
+    >{{ formInputField.label }}
+    <span *ngIf="isRequired"> *</span>
+  </label>
+  <select
+    class="FormInputSelect-input"
+    [formControl]="formInputField.control"
+    [attr.name]="formInputField.name"
+    [attr.id]="formInputField.name"
+  >
+    <option
+      *ngFor="let option of formInputField.options"
+      [value]="option.value"
+      >{{ option.label }}</option
+    >
+  </select>
+  <ngx-form-input-errors
+    *ngIf="isErrored"
+    [errors]="control.errors"
+  ></ngx-form-input-errors>
+</div>

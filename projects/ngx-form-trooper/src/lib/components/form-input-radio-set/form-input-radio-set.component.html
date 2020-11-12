@@ -1,0 +1,21 @@
+<fieldset class="FormInputRadioSet-container">
+  <legend class="FormInputRadioSet-legend">{{ formInputField.label }}</legend>
+  <label
+    class="FormInputRadioSet-radio"
+    *ngFor="let option of formInputField.options"
+    [attr.for]="option.value"
+  >
+    <div
+      class="FormInputRadioSet-visibleRadio"
+      [class.active]="formInputField.control.value === currentValue"
+    ></div>
+    <input
+      class="FormInoutRadioSet-input"
+      type="radio"
+      [attr.id]="option.value"
+      [value]="option.value"
+      [formControl]="formInputField.control"
+    />
+    <span class="FormInputRadioSet-label">{{ option.label }}</span>
+  </label>
+</fieldset>

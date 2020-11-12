@@ -2,6 +2,7 @@ import { ValidatorFn } from '@angular/forms';
 
 import { FormInputType } from '../constants/form-input-type.constant';
 import { IFormInputValidationConfig } from './form-input-validation-config.interface';
+import { ILabelValuePair } from './key-value.interface';
 
 export type IFormInputFactoryConfig =
   | IFormInputFactoryFieldConfig
@@ -16,6 +17,7 @@ export interface IFormInputFactoryFieldConfig {
   disabled?: boolean;
   validators?: IFormInputValidationConfig | ValidatorFn[];
   tooltip?: string;
+  options?: Array<ILabelValuePair>;
 }
 export interface IFormInputFactoryGroupConfig {
   name: string;
