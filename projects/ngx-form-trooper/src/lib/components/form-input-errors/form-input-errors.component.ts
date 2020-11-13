@@ -20,9 +20,17 @@ export class NgxFormInputErrorsComponent implements OnChanges {
 
   private _getErrors(): void {
     if (this.errors.required) {
-      this.errorText = 'This field is required.';
+      this.errorText = 'This field is required';
     } else if (this.errors.email) {
-      this.errorText = 'This is not a valid email address.';
+      this.errorText = 'This is not a valid email address';
+    } else if (this.errors.max) {
+      this.errorText = `Value cannot be larger than ${this.errors.max.max}`;
+    } else if (this.errors.min) {
+      this.errorText = `Value cannot be smaller than ${this.errors.min.min}`;
+    } else if (this.errors.minlength) {
+      this.errorText = `Minimum length for this field is ${this.errors.minlength.requiredLength}`;
+    } else if (this.errors.maxlength) {
+      this.errorText = `Maximum length for this field is ${this.errors.maxlength.requiredLength}`;
     } else {
       this.errorText = undefined;
     }
