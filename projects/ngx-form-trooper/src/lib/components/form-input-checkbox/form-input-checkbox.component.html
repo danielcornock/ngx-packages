@@ -10,5 +10,12 @@
   <div class="FormInputCheckbox-checkbox">
     <i-feather name="check" *ngIf="formInputField.control.value"></i-feather>
   </div>
-  <span class="FormInputCheckbox-label">{{ formInputField.label }}</span>
+  <span class="FormInputCheckbox-label">
+    <ng-container *ngIf="formInputField.label; else template">
+      {{ formInputField.label }}
+    </ng-container>
+    <ng-template #template>
+      <ng-content></ng-content>
+    </ng-template>
+  </span>
 </label>

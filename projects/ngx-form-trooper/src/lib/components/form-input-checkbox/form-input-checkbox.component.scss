@@ -40,5 +40,6 @@
   &-label {
     @include form-input-label;
     margin-bottom: 0;
+    flex: 1 1 100%;
   }
 }
