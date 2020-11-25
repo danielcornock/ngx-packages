@@ -20,6 +20,12 @@ export class FormContainer {
     return this.formGroup.value;
   }
 
+  public getField(fieldName: string): FormInputField {
+    return this.fields.find(
+      (field) => field.name === fieldName
+    ) as FormInputField;
+  }
+
   public get isInvalid(): boolean {
     return this.formGroup.invalid;
   }
