@@ -13,9 +13,9 @@
     class="FormInputMultiSelect-select"
   >
     <mat-option
-      *ngFor="let field of formInputMultiSelectOptions"
-      [value]="field"
-      >{{ field | titlecase }}</mat-option
+      *ngFor="let option of formInputField.options"
+      [value]="option.value"
+      >{{ option.label | titlecase }}</mat-option
     >
   </mat-select>
 
