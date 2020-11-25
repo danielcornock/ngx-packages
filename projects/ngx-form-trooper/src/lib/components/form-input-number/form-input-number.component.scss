@@ -1,0 +1,14 @@
+@import '../../styles/styles.scss';
+
+:host {
+  display: block;
+}
+.FormInputNumber {
+  &-input {
+    @include form-input;
+  }
+
+  &-label {
+    @include form-input-label;
+  }
+}
