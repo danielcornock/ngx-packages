@@ -7,9 +7,16 @@
   padding: 12px;
   border: 1px solid var(--color-form-input-border, $color-form-input-border);
   border-radius: var(--form-input-border-radius, $br-sm);
-  font-size: 18px;
+  font-size: var(--form-input-font-size, 18px);
   width: 100%;
   margin-bottom: 23px;
+
+  &:focus {
+    outline-color: var(
+      --color-form-input-border--focus,
+      $color-form-input-border
+    );
+  }
 
   @include form-input-error-styles;
 
@@ -22,7 +29,7 @@
   display: block;
   text-align: left;
   font-size: 14px;
-  margin-bottom: 8px;
+  margin-bottom: 6px;
   font-weight: 500;
   letter-spacing: 0.5px;
   color: var(--color-form-label, $color-form-label);

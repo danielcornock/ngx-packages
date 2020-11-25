@@ -12,9 +12,11 @@ import { FormInputMultiSelectComponent } from './components';
 import { FormInputCheckboxComponent } from './components/form-input-checkbox/form-input-checkbox.component';
 import { NgxFormInputErrorsComponent } from './components/form-input-errors/form-input-errors.component';
 import { FormInputHtmlComponent } from './components/form-input-html/form-input-html.component';
+import { FormInputNumberComponent } from './components/form-input-number/form-input-number.component';
 import { FormInputPasswordComponent } from './components/form-input-password/form-input-password.component';
 import { FormInputRadioSetComponent } from './components/form-input-radio-set/form-input-radio-set.component';
 import { FormInputSelectComponent } from './components/form-input-select/form-input-select.component';
+import { FormInputTextareaComponent } from './components/form-input-textarea/form-input-textarea.component';
 import { NgxFormInputComponent } from './components/form-input/form-input.component';
 import { FormFactory } from './services/form-factory/form-factory.service';
 import { FormInputFactory } from './services/form-input-factory/form-input-factory.service';
@@ -28,7 +30,9 @@ import { FormInputFactory } from './services/form-input-factory/form-input-facto
     FormInputCheckboxComponent,
     FormInputHtmlComponent,
     FormInputSelectComponent,
-    FormInputRadioSetComponent
+    FormInputRadioSetComponent,
+    FormInputNumberComponent,
+    FormInputTextareaComponent
   ],
   imports: [
     CommonModule,
@@ -49,7 +53,9 @@ import { FormInputFactory } from './services/form-input-factory/form-input-facto
     FormInputCheckboxComponent,
     FormInputHtmlComponent,
     FormInputSelectComponent,
-    FormInputRadioSetComponent
+    FormInputRadioSetComponent,
+    FormInputNumberComponent,
+    FormInputTextareaComponent
   ]
 })
 export class NgxFormTrooperModule {}
