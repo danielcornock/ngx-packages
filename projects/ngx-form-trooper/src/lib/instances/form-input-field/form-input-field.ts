@@ -22,4 +22,8 @@ export class FormInputField {
     this.tooltip = config.tooltip;
     this.options = config.options;
   }
+
+  public get isInvalid(): boolean {
+    return this.control.invalid;
+  }
 }
