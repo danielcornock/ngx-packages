@@ -1,0 +1,17 @@
+@import '../../styles/styles.scss';
+
+:host {
+  display: block;
+}
+.FormInputTextarea {
+  &-input {
+    @include form-input;
+    resize: none;
+    overflow-y: hidden;
+    min-height: 72px;
+  }
+
+  &-label {
+    @include form-input-label;
+  }
+}

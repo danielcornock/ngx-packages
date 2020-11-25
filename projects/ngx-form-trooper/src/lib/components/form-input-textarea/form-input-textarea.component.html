@@ -1,0 +1,29 @@
+<div class="FormInputTextarea-container">
+  <label
+    class="FormInputTextarea-label"
+    [attr.for]="formInputField.name"
+    [class.is-errored]="isErrored"
+    >{{ formInputField.label }}
+    <span *ngIf="isRequired"> *</span>
+  </label>
+
+  <textarea
+    class="FormInputTextarea-input"
+    #tooltip="matTooltip"
+    [matTooltip]="formInputField.tooltip"
+    matTooltipPosition="above"
+    (focus)="tooltip.show()"
+    (blur)="tooltip.hide()"
+    [class.is-errored]="isErrored"
+    [placeholder]="formInputField.placeholder || ''"
+    [attr.name]="formInputField.name"
+    [attr.id]="formInputField.label"
+    [formControl]="control"
+    (input)="setHeight()"
+    #textarea
+  ></textarea>
+  <ngx-form-input-errors
+    *ngIf="isErrored"
+    [errors]="control.errors"
+  ></ngx-form-input-errors>
+</div>
