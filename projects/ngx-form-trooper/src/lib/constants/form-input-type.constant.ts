@@ -8,5 +8,6 @@ export enum FormInputType {
   DATE = 'date',
   MONTH = 'month',
   SELECT = 'select',
-  RADIO = 'radio'
+  RADIO = 'radio',
+  TEXTAREA = 'textarea'
 }
