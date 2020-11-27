@@ -6,9 +6,25 @@
 .FormInputSelect {
   &-input {
     @include form-input;
+    -webkit-appearance: none;
+    appearance: none;
   }
 
   &-label {
     @include form-input-label;
+  }
+
+  &-inputContainer {
+    position: relative;
+    display: block;
+  }
+
+  &-icon {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--color-form-label, $color-form-label);
+    z-index: 10;
   }
 }

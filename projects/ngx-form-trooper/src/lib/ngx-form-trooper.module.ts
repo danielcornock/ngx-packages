@@ -5,7 +5,7 @@ import { MatSelectModule } from '@angular/material/select';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FeatherModule } from 'angular-feather';
-import { Check } from 'angular-feather/icons';
+import { Check, ChevronDown } from 'angular-feather/icons';
 import { QuillModule } from 'ngx-quill';
 
 import { FormInputMultiSelectComponent } from './components';
@@ -43,7 +43,7 @@ import { FormInputFactory } from './services/form-input-factory/form-input-facto
     MatSelectModule,
     BrowserAnimationsModule,
     MatTooltipModule,
-    FeatherModule.pick({ Check }),
+    FeatherModule.pick({ Check, ChevronDown }),
     QuillModule.forRoot()
   ],
   providers: [FormInputFactory, FormFactory],

@@ -6,18 +6,21 @@
     >{{ formInputField.label }}
     <span *ngIf="isRequired"> *</span>
   </label>
-  <select
-    class="FormInputSelect-input"
-    [formControl]="formInputField.control"
-    [attr.name]="formInputField.name"
-    [attr.id]="formInputField.name"
-  >
-    <option
-      *ngFor="let option of formInputField.options"
-      [value]="option.value"
-      >{{ option.label }}</option
+  <span class="FormInputSelect-inputContainer">
+    <select
+      class="FormInputSelect-input"
+      [formControl]="formInputField.control"
+      [attr.name]="formInputField.name"
+      [attr.id]="formInputField.name"
     >
-  </select>
+      <option
+        *ngFor="let option of formInputField.options"
+        [value]="option.value"
+        >{{ option.label }}</option
+      >
+    </select>
+    <i-feather class="FormInputSelect-icon" name="chevron-down"></i-feather>
+  </span>
   <ngx-form-input-errors
     *ngIf="isErrored"
     [errors]="control.errors"
