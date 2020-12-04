@@ -4,6 +4,9 @@ A library built around Angular's reactive forms to reduce boilerplate and ease t
 
 This package provides services, instances and components.
 
+## Setup
+You must have imported `BrowserNoopModule` or `NoopAnimationsModule` for this library to work. It does not include these modules to allow for lazy-loading.
+
 ## Changing the default styles
 
 Default styles of the form can be overriden with CSS variables.

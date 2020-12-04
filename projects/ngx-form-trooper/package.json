@@ -1,9 +1,10 @@
 {
   "name": "ngx-form-trooper",
-  "version": "0.11.0",
+  "version": "0.12.0",
   "peerDependencies": {
-    "@angular/common": "^10.1.6",
-    "@angular/core": "^10.1.6"
+    "@angular/common": "^10.x.x",
+    "@angular/core": "^10.x.x",
+    "@angular/material": "10.x.x"
   },
   "dependencies": {
     "angular-feather": "^6.0.10",

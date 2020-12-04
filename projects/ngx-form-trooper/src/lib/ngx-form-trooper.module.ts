@@ -3,7 +3,6 @@ import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatSelectModule } from '@angular/material/select';
 import { MatTooltipModule } from '@angular/material/tooltip';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FeatherModule } from 'angular-feather';
 import { Check, ChevronDown } from 'angular-feather/icons';
 import { QuillModule } from 'ngx-quill';
@@ -41,7 +40,6 @@ import { FormInputFactory } from './services/form-input-factory/form-input-facto
     FormsModule,
     ReactiveFormsModule,
     MatSelectModule,
-    BrowserAnimationsModule,
     MatTooltipModule,
     FeatherModule.pick({ Check, ChevronDown }),
     QuillModule.forRoot()
