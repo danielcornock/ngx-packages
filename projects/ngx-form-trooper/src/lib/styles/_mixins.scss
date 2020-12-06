@@ -4,12 +4,12 @@
     --color-form-input-background,
     $color-form-input-background
   );
-  padding: 12px;
+  padding: var(--form-input-padding, 12px);
   border: 1px solid var(--color-form-input-border, $color-form-input-border);
   border-radius: var(--form-input-border-radius, $br-sm);
   font-size: var(--form-input-font-size, 18px);
   width: 100%;
-  margin-bottom: 23px;
+  margin-bottom: var(--form-input-margin-bottom, 30px);
 
   &:focus {
     outline-color: var(
@@ -28,10 +28,10 @@
 @mixin form-input-label {
   display: block;
   text-align: left;
-  font-size: 14px;
-  margin-bottom: 6px;
-  font-weight: 500;
-  letter-spacing: 0.5px;
+  font-size: var(--form-input-label-size, 14px);
+  margin-bottom: var(--form-input-label-margin-bottom, 6px);
+  font-weight: var(--form-input-label-font-weight, 500);
+  letter-spacing: var(--form-input-label-letter-spacing, 0.5px);
   color: var(--color-form-label, $color-form-label);
 
   @include form-label-error-styles;
@@ -41,6 +41,7 @@
   color: var(--color-form-input-label--error, $color-form-input-label--error);
   font-weight: 500;
   font-size: 14px;
+  margin-bottom: calc(var(--form-input-margin-bottom, 30px) - 23px);
 }
 
 @mixin form-input-error-styles {

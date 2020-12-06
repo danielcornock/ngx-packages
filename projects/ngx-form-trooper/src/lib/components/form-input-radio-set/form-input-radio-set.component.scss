@@ -14,13 +14,13 @@
 
 .FormInputRadioSet {
   &-container {
-    margin-bottom: 23px;
+    margin-bottom: 30px;
     border: 0;
   }
 
   &-legend {
     @include form-input-label;
-    margin-bottom: $spacing-10;
+    margin-bottom: $spacing-15;
   }
 
   &-label {
@@ -31,6 +31,7 @@
   &-radio {
     display: flex;
     align-items: center;
+    margin-left: $spacing-10;
 
     & + & {
       margin-top: $spacing-10;

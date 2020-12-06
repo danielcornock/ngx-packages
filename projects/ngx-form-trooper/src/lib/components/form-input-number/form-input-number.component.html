@@ -1,4 +1,4 @@
-<div class="FormInputNumber-container">
+<div class="FormInputNumber-container" *ngIf="!(isHidden$ | async)">
   <label
     class="FormInputNumber-label"
     [attr.for]="formInputField.name"

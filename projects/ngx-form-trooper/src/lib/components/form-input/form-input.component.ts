@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { FormControl } from '@angular/forms';
+import { Observable, of } from 'rxjs';
 
 import { FormInputField } from '../../instances';
 
@@ -14,12 +15,16 @@ export class NgxFormInputComponent implements OnInit {
 
   public control: FormControl;
   public isRequired: boolean;
+  public isHidden$: Observable<boolean>;
 
   constructor() {}
 
   ngOnInit(): void {
     this.control = this.formInputField.control;
     this.isRequired = this._getRequiredStatus();
+    this.isHidden$ = this.formInputField.hidden
+      ? this.formInputField.hidden()
+      : of(false);
   }
 
   public get isErrored(): boolean {

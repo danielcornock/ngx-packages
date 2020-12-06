@@ -1,4 +1,5 @@
 import { ValidatorFn } from '@angular/forms';
+import { Observable } from 'rxjs';
 
 import { FormInputType } from '../constants/form-input-type.constant';
 import { IFormInputValidationConfig } from './form-input-validation-config.interface';
@@ -18,6 +19,8 @@ export interface IFormInputFactoryFieldConfig {
   validators?: IFormInputValidationConfig | ValidatorFn[];
   tooltip?: string;
   options?: Array<ILabelValuePair>;
+  hidden?(): Observable<boolean>;
+  setValue?(arg: any): void | Promise<void>;
 }
 export interface IFormInputFactoryGroupConfig {
   name: string;

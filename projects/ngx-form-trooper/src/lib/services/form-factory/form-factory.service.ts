@@ -34,8 +34,14 @@ export class FormFactory {
   private _createInputs(
     config: IFormFactoryConfig
   ): Array<FormInputField | FormInputGroup> {
-    return config.map((fieldConfig: IFormInputFactoryConfig) => {
-      return this._formInputFactory.create(fieldConfig);
-    });
+    return config.map(
+      (fieldConfig: IFormInputFactoryConfig | FormInputField) => {
+        if (fieldConfig instanceof FormInputField) {
+          return fieldConfig;
+        }
+
+        return this._formInputFactory.create(fieldConfig);
+      }
+    );
   }
 }

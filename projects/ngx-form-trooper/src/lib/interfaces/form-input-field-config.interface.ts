@@ -1,4 +1,5 @@
 import { FormControl } from '@angular/forms';
+import { Observable } from 'rxjs';
 
 import { FormInputType } from '../constants/form-input-type.constant';
 import { ILabelValuePair } from './key-value.interface';
@@ -11,4 +12,6 @@ export interface IFormInputFieldConfig {
   placeholder?: string;
   tooltip?: string;
   options?: Array<ILabelValuePair>;
+  hidden?(): Observable<boolean>;
+  setValue?(arg: any): void | Promise<void>;
 }
