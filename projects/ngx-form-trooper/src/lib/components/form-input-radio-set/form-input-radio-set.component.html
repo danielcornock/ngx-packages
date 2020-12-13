@@ -5,17 +5,22 @@
     *ngFor="let option of formInputField.options"
     [attr.for]="option.value"
   >
+    <input
+      class="FormInputRadioSet-input"
+      type="radio"
+      [attr.id]="option.value"
+      [value]="option.value"
+      [name]="formInputField.name"
+      [formControl]="formInputField.control"
+    />
     <div
       class="FormInputRadioSet-visibleRadio"
       [class.active]="formInputField.control.value === option.value"
     ></div>
-    <input
-      class="FormInoutRadioSet-input"
-      type="radio"
-      [attr.id]="option.value"
-      [value]="option.value"
-      [formControl]="formInputField.control"
-    />
     <span class="FormInputRadioSet-label">{{ option.label }}</span>
   </label>
+  <ngx-form-input-errors
+    *ngIf="isErrored"
+    [errors]="control.errors"
+  ></ngx-form-input-errors>
 </fieldset>

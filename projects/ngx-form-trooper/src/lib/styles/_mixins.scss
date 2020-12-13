@@ -12,10 +12,8 @@
   margin-bottom: var(--form-input-margin-bottom, 30px);
 
   &:focus {
-    outline-color: var(
-      --color-form-input-border--focus,
-      $color-form-input-border
-    );
+    outline: 1px auto
+      var(--color-form-input-border--focus, $color-form-input-border);
   }
 
   @include form-input-error-styles;

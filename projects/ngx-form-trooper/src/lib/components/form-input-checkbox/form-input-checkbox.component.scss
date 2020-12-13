@@ -5,15 +5,23 @@
 }
 
 .FormInputCheckbox {
+  $cmp: &;
+
   &-container {
     display: flex;
     align-items: center;
-    margin-bottom: 30px;
+    margin-bottom: 23px;
   }
 
   &-input {
-    visibility: hidden;
     width: 0;
+
+    &:focus {
+      & + #{$cmp}-checkbox {
+        outline: 1px auto
+          var(--color-form-input-border--focus, $color-form-input-border);
+      }
+    }
   }
 
   &-checkbox {
