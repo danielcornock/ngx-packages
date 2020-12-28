@@ -18,6 +18,10 @@
   &-container {
     margin-bottom: 30px;
     border: 0;
+
+    &.is-errored {
+      margin-bottom: 7px;
+    }
   }
 
   &-legend {
