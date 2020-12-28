@@ -12,6 +12,7 @@ export interface IFormInputFieldConfig {
   placeholder?: string;
   tooltip?: string;
   options?: Array<ILabelValuePair>;
+  customConfig?: any;
   hidden?(): Observable<boolean>;
   setValue?(arg: any): void | Promise<void>;
 }

@@ -1,0 +1,22 @@
+<div class="FormInputSlider-container">
+  <label [attr.for]="formInputField.name" class="FormInputSlider-label">{{
+    formInputField.label
+  }}</label>
+  <div class="FormInputSlider-inputContainer">
+    <input
+      type="range"
+      class="FormInputSlider-input"
+      [formControl]="formInputField.control"
+      [attr.id]="formInputField.name"
+      [attr.min]="formInputField.customConfig.min"
+      [attr.max]="formInputField.customConfig.max"
+      [attr.step]="formInputField.customConfig.step"
+    />
+    <p
+      class="FormInputSlider-currentValue"
+      [style.left]="valuePercentage | async"
+    >
+      {{ control.value }}
+    </p>
+  </div>
+</div>

@@ -1,0 +1,52 @@
+@import '../../styles/styles.scss';
+
+.FormInputSlider {
+  &-label {
+    @include form-input-label;
+  }
+
+  &-input {
+    width: 100%;
+    height: 10px;
+    background-color: #eeeeee;
+    border-radius: $br-max;
+
+    &:focus {
+      outline: none;
+      background-color: #dddddd;
+    }
+
+    &::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      appearance: none;
+      width: 20px;
+      height: 20px;
+      background: var(--color-form-label, $color-form-label);
+      cursor: pointer;
+      border-radius: $br-max;
+    }
+
+    &::-moz-range-thumb {
+      -webkit-appearance: none;
+      appearance: none;
+      width: 20px;
+      height: 20px;
+      background: var(--color-form-label, $color-form-label);
+      cursor: pointer;
+      border-radius: $br-max;
+    }
+  }
+
+  &-inputContainer {
+    position: relative;
+    margin-bottom: 40px;
+  }
+
+  &-currentValue {
+    position: absolute;
+    top: calc(100% + 5px);
+    transform: translateX(-50%);
+    color: var(--color-form-label, $color-form-label);
+    font-weight: 500;
+  }
+}

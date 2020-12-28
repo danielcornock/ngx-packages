@@ -9,5 +9,6 @@ export enum FormInputType {
   MONTH = 'month',
   SELECT = 'select',
   RADIO = 'radio',
-  TEXTAREA = 'textarea'
+  TEXTAREA = 'textarea',
+  SLIDER = 'slider'
 }

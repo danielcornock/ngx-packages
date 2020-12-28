@@ -31,6 +31,10 @@
     *ngSwitchCase="formInputType.TEXTAREA"
     [formInputField]="formInputField"
   ></ngx-form-input-textarea>
+  <ngx-form-input-slider
+    *ngSwitchCase="formInputType.SLIDER"
+    [formInputField]="formInputField"
+  ></ngx-form-input-slider>
   <ngx-form-input
     *ngSwitchDefault
     [formInputField]="formInputField"

@@ -14,6 +14,7 @@ export class FormInputField {
   public type: FormInputType;
   public tooltip?: string;
   public options?: Array<ILabelValuePair>;
+  public customConfig: any;
   public hidden?: () => Observable<boolean>;
 
   constructor(config: IFormInputFieldConfig) {
@@ -25,6 +26,7 @@ export class FormInputField {
     this.tooltip = config.tooltip;
     this.options = config.options;
     this.hidden = config.hidden;
+    this.customConfig = config.customConfig;
 
     if (config.setValue) {
       config.control.valueChanges.subscribe(config.setValue);
