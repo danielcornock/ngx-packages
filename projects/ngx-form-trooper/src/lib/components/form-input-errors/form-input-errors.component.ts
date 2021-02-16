@@ -31,6 +31,8 @@ export class NgxFormInputErrorsComponent implements OnChanges {
       this.errorText = `Minimum length for this field is ${this.errors.minlength.requiredLength}`;
     } else if (this.errors.maxlength) {
       this.errorText = `Maximum length for this field is ${this.errors.maxlength.requiredLength}`;
+    } else if (this.errors.hex) {
+      this.errorText = 'This is not a valid hex colour';
     } else {
       this.errorText = undefined;
     }

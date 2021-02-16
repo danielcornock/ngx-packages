@@ -1,0 +1,30 @@
+<div class="FormInputColor-container">
+  <label
+    class="FormInputColor-label"
+    [attr.for]="formInputField.name"
+    [class.is-errored]="isErrored"
+    >{{ formInputField.label }}</label
+  >
+  <div class="FormInputColor-inputContainer" [class.is-errored]="isErrored">
+    <input
+      class="FormInputColor-input"
+      type="color"
+      [formControl]="control"
+      (change)="setTextValue($event)"
+      #color
+    />
+    <input
+      class="FormInputColor-textInput"
+      type="text"
+      [formControl]="textControl"
+      [attr.name]="formInputField.name"
+      [attr.id]="formInputField.name"
+      (change)="setColorValue($event)"
+      (focus)="color.click()"
+    />
+  </div>
+  <ngx-form-input-errors
+    *ngIf="isErrored"
+    [errors]="textControl.errors"
+  ></ngx-form-input-errors>
+</div>

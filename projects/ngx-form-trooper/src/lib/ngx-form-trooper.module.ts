@@ -9,6 +9,7 @@ import { QuillModule } from 'ngx-quill';
 
 import { FormInputMultiSelectComponent } from './components';
 import { FormInputCheckboxComponent } from './components/form-input-checkbox/form-input-checkbox.component';
+import { FormInputColorComponent } from './components/form-input-color/form-input-color.component';
 import { NgxFormInputErrorsComponent } from './components/form-input-errors/form-input-errors.component';
 import { FormInputHtmlComponent } from './components/form-input-html/form-input-html.component';
 import { FormInputItemComponent } from './components/form-input-item/form-input-item.component';
@@ -35,7 +36,8 @@ import { FormInputFactory } from './services/form-input-factory/form-input-facto
     FormInputNumberComponent,
     FormInputTextareaComponent,
     FormInputItemComponent,
-    FormInputSliderComponent
+    FormInputSliderComponent,
+    FormInputColorComponent
   ],
   imports: [
     CommonModule,
@@ -59,7 +61,8 @@ import { FormInputFactory } from './services/form-input-factory/form-input-facto
     FormInputNumberComponent,
     FormInputTextareaComponent,
     FormInputItemComponent,
-    FormInputSliderComponent
+    FormInputSliderComponent,
+    FormInputColorComponent
   ]
 })
 export class NgxFormTrooperModule {}

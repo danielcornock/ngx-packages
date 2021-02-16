@@ -1,0 +1,35 @@
+@import '../../styles/styles.scss';
+
+.FormInputColor {
+  &-textInput {
+    padding: 0;
+    border: 0;
+    background-color: transparent;
+    width: 100%;
+    font-size: var(--form-input-font-size, 18px);
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  &-label {
+    @include form-input-label;
+  }
+
+  &-inputContainer {
+    @include form-input;
+    display: flex;
+
+    &:focus-within {
+      outline: 1px auto
+        var(--color-form-input-border--focus, $color-form-input-border);
+    }
+  }
+
+  &-input {
+    background-color: transparent;
+    border: 0;
+    margin-right: 10px;
+  }
+}

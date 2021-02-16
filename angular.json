@@ -36,11 +36,18 @@
               "projects/ngx-form-trooper/tsconfig.lib.json",
               "projects/ngx-form-trooper/tsconfig.spec.json"
             ],
-            "exclude": ["**/node_modules/**"]
+            "exclude": [
+              "**/node_modules/**"
+            ]
           }
         }
       }
     }
   },
-  "defaultProject": "ngx-form-trooper"
+  "defaultProject": "ngx-form-trooper",
+  "schematics": {
+    "@schematics/angular:component": {
+      "styleext": "scss"
+    }
+  }
 }

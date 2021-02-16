@@ -10,5 +10,6 @@ export enum FormInputType {
   SELECT = 'select',
   RADIO = 'radio',
   TEXTAREA = 'textarea',
-  SLIDER = 'slider'
+  SLIDER = 'slider',
+  COLOR = 'color'
 }

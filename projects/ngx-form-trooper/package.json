@@ -1,6 +1,6 @@
 {
   "name": "ngx-form-trooper",
-  "version": "0.15.0",
+  "version": "0.16.0",
   "peerDependencies": {
     "@angular/common": "^10.x.x",
     "@angular/core": "^10.x.x",
